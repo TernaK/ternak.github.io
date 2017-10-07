@@ -6,6 +6,7 @@ fx |  0  | cx
 0  |  fy | cy 
 0  |  0  |  1 
 
+
 - fx, fy
   
   Camera focal lengths expressed in pixels. Think of fx amd fy as the dimensions in pixels of a square parrallel to the image plane 1m away from the optical center of the camera.
@@ -23,6 +24,7 @@ Effectively the intrinsic matrix is used to calculate the displacement of a poin
 r11 | r12 | r13 | tx
 r21 | r22 | r23 | ty
 r31 | r32 | r33 | tz
+
 
 - rx, ry, rz
 
