@@ -1,7 +1,7 @@
 ## 3D Geometry and perspective transformation
 
 ### Deconstructing the intrinsic matrix
-_  |  _  | _
+_  |  _  | `P`
 ----|-----|---
 fx |  0  | cx 
 0  |  fy | cy 
@@ -11,7 +11,7 @@ fx |  0  | cx
   
   Camera focal lengths expressed in pixels. Think of fx amd fy as the dimensions in pixels of a square parrallel to the image plane 1m away from the optical center of the camera.
   
-- (cx, cy)
+- (cx, cy), **P** or principal point
 
   Coordinates of the optical center of the camera expressed in the camera frame. This is where the optical axis passed through the image.
 
