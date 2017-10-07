@@ -1,11 +1,10 @@
 ## 3D Geometry and perspective transformation
 
 ### Deconstructing the intrinsic matrix
-f  |  f  | `P`
----|-----|---
-fx |  0  | cx 
-0  |  fy | cy 
-0  |  0  | 1
+
+[fx |  0  | cx ]
+[0  |  fy | cy ]
+[0  |  0  |  1 ]
 
 - fx, fy
   
@@ -25,19 +24,19 @@ r11 | r12 | r13 | tx
 r21 | r22 | r23 | ty
 r31 | r32 | r33 | tz
 
-- **rx**, **ry**, **rz**
+- rx, ry, rz
 
   x,y,z-axis basis of the camera fre
 
-- **R** = [rx ry rz]
+- R = [rx ry rz]
 
   Inverse of the camera rotation matrix relative to the world frame
 
-- **T** = [tx ty tz]' 
+- T = [tx ty tz]' 
 
   Position of the world origin offset form the camera
 
-- **X** = [**R** | **T**] * **x**
+- X = [R | T] * x
 
   **X** is a point at **x**, which is in world coordinates, expressed in the camera frame coordinates   
 
