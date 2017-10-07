@@ -4,4 +4,4 @@ I'll also keep helpful tips for general development.
 
 ### What do you need help with?
 - [Caffe](caffe_install.md)
-- [Makefile](makefile_tips.md)
+- [Makefile/cmake](cmake_makefile_tips.md)
