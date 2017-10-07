@@ -36,7 +36,7 @@ r31 | r32 | r33 | tz
 
   Position of the world origin offset form the camera
 
-- X = [R | T] * x
+- X = [R T] * x
 
   **X** is a point at **x**, which is in world coordinates, expressed in the camera frame coordinates   
 
