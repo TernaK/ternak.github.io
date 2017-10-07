@@ -2,9 +2,9 @@
 
 ### Deconstructing the intrinsic matrix
 
-[fx |  0  | cx ]
-[0  |  fy | cy ]
-[0  |  0  |  1 ]
+fx |  0  | cx 
+0  |  fy | cy 
+0  |  0  |  1 
 
 - fx, fy
   
