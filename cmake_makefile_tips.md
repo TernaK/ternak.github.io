@@ -1,6 +1,4 @@
-# Makefile tips
-
-### Using `pkg-config`
+#### Lazily specify header and library search paths, and libraries to link using `pkg-config`
 Here's a simple `opencv` program;
 ```c++
 # program.cpp
