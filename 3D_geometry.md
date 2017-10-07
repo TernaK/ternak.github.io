@@ -1,8 +1,8 @@
 ## 3D Geometry and perspective transformation
 
 ### Deconstructing the intrinsic matrix
-_  |  _  | `P`
-----|-----|---
+f  |  f  | `P`
+---|-----|---
 fx |  0  | cx 
 0  |  fy | cy 
 0  |  0  | 1
