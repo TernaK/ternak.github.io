@@ -14,7 +14,7 @@ fx |  0  | cx
 
   Coordinates of the optical center of the camera expressed in the camera frame. This is where the optical axis passed through the image.
 
-Effectively the intrinsic matrix is used to calculate the displacement of the point in space from the optical axis expressed in the image frame in pixels.
+Effectively the intrinsic matrix is used to calculate the displacement of a point in space from the optical axis expressed in the image frame in pixels.
 
 ### Deconstructing the extrinsic matrix
 
