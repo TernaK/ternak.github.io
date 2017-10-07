@@ -5,3 +5,4 @@ I'll also keep helpful tips for general development.
 ### What do you need help with?
 - [Caffe](caffe_install.md)
 - [Makefile/cmake](cmake_makefile_tips.md)
+- [3D geometry](3D_geometry.md)
