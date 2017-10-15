@@ -41,7 +41,7 @@ target_compile_options(testapp PUBLIC ${GTEST_CFLAGS})
 include(CTest)
 add_test(first_and_only_test testapp)
 
-### Using pkg_search_module(XPREFIX ...) defines the following variables
+### Using pkg_search_module(XPREFIX ...) defines the following
 # <XPREFIX>_FOUND          ... set to 1 if module(s) exist
 # <XPREFIX>_LIBRARIES      ... only the libraries (w/o the '-l')
 # <XPREFIX>_LIBRARY_DIRS   ... the paths of the libraries (w/o the '-L')
