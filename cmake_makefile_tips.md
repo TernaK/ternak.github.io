@@ -1,3 +1,4 @@
+## `cmake + pkg-config` and `makefile` tips
 ### Lazily specify header and library search paths, and libraries to link using `pkg-config`
 Here's a simple `opencv` program;
 ```c++
