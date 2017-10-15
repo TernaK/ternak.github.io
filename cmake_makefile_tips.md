@@ -24,7 +24,7 @@ A shorthand way of doing this is;
 
 Use this if you're especially too lazy to write the path names or the list of required libraries.
 
-### Using `pkg-config` to set libraries and compilation options
+### Using `pkg-config` to set up unit tests with `googletest`'s `gtest` library
 _References_
 - [FindPkgConfig](https://cmake.org/cmake/help/v3.0/module/FindPkgConfig.html)
 - [googletest](https://github.com/google/googletest/blob/master/googletest/docs/Pkgconfig.md)
