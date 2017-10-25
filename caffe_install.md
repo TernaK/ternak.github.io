@@ -1,3 +1,4 @@
+## Caffe Installation
 ### macOS (Sierra 10.12.6)
 1. Clone <http://github.com/weiliu89/caffe> into the home folder (strongly recommended).
 2. Checkout the `ssd` branch.
