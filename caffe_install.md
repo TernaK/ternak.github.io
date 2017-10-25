@@ -2,6 +2,7 @@
 ### macOS (Sierra 10.12.6)
 1. Clone caffe into the home folder (strongly recommended).
 2. Make a `build` directory and from there, execute;
+
     `cmake .. <args> # args should set caffe to build for CPU mode`
     
     `vecLib` might have to be found as part of the `Accelerate` framework (see the `vecLib` section below). Resolve all dependencies then `make` and `sudo make install`. If everything is fine, the build outputs will be inside `caffe/build/install` including `lib`, `include` for the library and include files respectively. 
