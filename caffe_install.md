@@ -1,16 +1,19 @@
-## `Caffe` Installation Troubles
+### macOS (Sierra 10.12.6)
+1. Clone <http://github.com/weiliu89/caffe> into the home folder (strongly recommended).
+2. Checkout the `ssd` branch.
+3. Make a `build` directory and from there, execute `cmake .. -DCPU_ONLY=ON`. `vecLib` might have to be found as part of the `Accelerate` framework (see the `vecLib` section below). Resolve all dependencies then `make` and `sudo make install`. If everything is fine, the build outputs will be inside `caffe/build/install` including `lib`, `include` for the library and include files respectively. 
+4. Create a `CAFFEROOT` environment variable by running the following command or placing this into your `.bashrc` or `.zshrc` or whatever script is run when your terminal launches;
 
-A number of issues come up when building `caffe` from source. I set up my `caffe` installation to use both the `C++` and `python` libraries on an `NVIDIA Jetson TX2` to take advantage of it's GPU for vision recognition tasks with convolutional neural nets. After following the basic installation instuctions for dependencies on the `caffe` homepage, the compilation stage may not go according to plan. The following are common problems and how to resolve them;
+    `export CAFFEROOT=$HOME/caffe/build/install # assuming caffe is in the home directory $HOME`.
 
-#### Failing to find `opencv`
+    The last step is crucial for `planck_detector` to be able to build as its cmake must find your caffe installation.
+5. CMakeLists.txt can find caffe through;
+    ```
+    include_directories($ENV{CAFFEROOT}/include)
+    link_directories($ENV{CAFFEROOT}/lib)
+    ```
 
-  This might happen if `opencv` was installed from source. With `pkg-config` the `caffe` `Makefile.config` can find that by uncommenting `# USE_PKG_CONFIG := 1`. Or just use `cmake` to build.
-#### Failing to link to the correct `hdf5` libraries
+#### `vecLib`
+After running `cmake .. -DCPU_ONLY=ON`, edit `CMakeCache.txt` by finding the line pointing cmake to `vecLib` that begins with `vecLib_INCLUDE_DIR` and modify it as follows;
 
-  If `hdf5` was installed, it's likely actually installed as `hdf5_serial`. Add the path to the `hdf5` header files to `INCLUDE_DIRS` in `Makefile.config`. The second part of the solution involves creating symbolic links `hdf5.so` to `hdf5_serial.so` inside the `hdf5` libraries folder. Do this on the terminal with `ln -s hdf5_serial.so hdf5.so` form within the `hdf5` libraries folder. `sudo` might be required.
-  
-#### Failing to build tests on `TX2`
-
-  This is because the right CUDA compute capability (`6.2`, as at the time of writing this with a `TX2` recently flashed with Jetson Jetpack 3.1) is missing. Building with `cmake` will automatically resolve this, however you can also add `-gencode arch=compute_62,code=compute_62` to `CUDA_ARCH` in  `Makefile.config`.
-
-Just use `cmake` to save you a lot of pain and anguish.
+`vecLib_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Versions/Current/Frameworks/vecLib.framework/Headers`
