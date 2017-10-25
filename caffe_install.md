@@ -4,13 +4,11 @@
 3. Make a `build` directory and from there, execute `cmake .. -DCPU_ONLY=ON`. `vecLib` might have to be found as part of the `Accelerate` framework (see the `vecLib` section below). Resolve all dependencies then `make` and `sudo make install`. If everything is fine, the build outputs will be inside `caffe/build/install` including `lib`, `include` for the library and include files respectively. 
 4. Create a `CAFFEROOT` environment variable by running the following command or placing this into your `.bashrc` or `.zshrc` or whatever script is run when your terminal launches;
 
-    `export CAFFEROOT=$HOME/caffe/build/install # assuming caffe is in the home directory $HOME`.
-
-    The last step is crucial for `planck_detector` to be able to build as its cmake must find your caffe installation.
+    `export CAFFEROOT=$HOME/caffe # caffe is in the home directory, $HOME`.
 5. CMakeLists.txt can find caffe through;
     ```
-    include_directories($ENV{CAFFEROOT}/include)
-    link_directories($ENV{CAFFEROOT}/lib)
+    include_directories($ENV{CAFFEROOT}/build/install/include)
+    link_directories($ENV{CAFFEROOT}/build/install/lib)
     ```
 
 #### `vecLib`
