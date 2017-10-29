@@ -1,6 +1,7 @@
 ## Object Detection With Convolution Neural Nets
-
-![](images/freestyle_detections.gif)
+<p align="center">
+<img src="images/freestyle_detections.gif">
+</p>
 
 ### Classification vs Detection
 I often ponder neural networks trying to understand how they work. They're not so mysterious if you break down the internals and understand those fully first. When it comes to CNNs, classification is simpler to understand - the test sample either resembles what the model has learned to classify or not. For detection, it might be weird to explain how the CNN knows where an object is and what space in the image it occupies.
