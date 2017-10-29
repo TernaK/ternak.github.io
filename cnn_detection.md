@@ -7,12 +7,14 @@ I often ponder neural networks trying to understand how they work. They're not s
 Joseph Redmon's [YOLO](https://arxiv.org/abs/1506.02640) and Wei Liu's [Multibox Detector](https://arxiv.org/abs/1512.02325) offer two CNN schemes for object detection. They differ slightly in implementation but one can deduce that the principle is the same, and this principle is what really explains how detection works.
 
 #### ✨ "The principle" ✨
-The images are convolved and pooled for several layers then finally pass through fully connected layers at the end. The convolution and pooling add scale robustness and the fully connected layers act as regressors. 
+The images are convolved and pooled for several layers then finally pass through fully connected layers at the end. Convolution and pooling successively learn higher and higher level information and the fully connected layers act as regressors. 
 
 They divide the image input into a grid of cells. Each cell has what they often call  `anchor boxes`. Anchor boxes are predifined example bounding boxes of different aspect ratios designed to impart aspect ratio robustness into the CNN. Each anchor box has a box regressor that predicts the offsets of the box's corners from the anchor box's predefined location relative to its cell. Furthermore, each anchor box provides class predictions for each class the network is trained for. Concensus is taken by non-maximal supression and the object detections are returned with the top object probability as the confidence.
 
 This is how the multibox detector does it.
 ![](images/SSD.png)
+*source: Multibox detector*
 
 And this is how YOLO does it.
 ![](images/YOLO.png)
+*source: YOLO*
