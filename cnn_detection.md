@@ -8,4 +8,4 @@ The images are convolved and pooled for several layers then finally pass through
 
 They divide the image input into a grid of cells. Each cell has what they often call  `anchor boxes`. Anchor boxes are predifined example bounding boxes of different aspect ratios designed to impart aspect ratio robustness into the CNN. Each anchor box has a box regressor that predicts the offsets of the box's corners from the anchor box's predefined location relative to its cell. Furthermore, each anchor box provides class predictions for each class the network is trained for. Concensus is taken by non-maximal supression and the object detections are returned with the top object probability as the confidence.
 
-This scheme might not be as good as 
+#### Detection with Caffe
