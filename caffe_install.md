@@ -15,7 +15,7 @@ After running `cmake .. <args>`, edit `CMakeCache.txt` by finding the line point
 
 `vecLib_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Versions/Current/Frameworks/vecLib.framework/Headers`
 
-#### Anaconda build
+#### python3 Anaconda build
 ```
 cmake .. -DPYTHON_LIBRARY=$HOME/anaconda3/lib/libpython3.6m.dylib -DPYTHON_EXECUTABLE=$HOME/anaconda3/bin/python \
          -DPYTHON_INCLUDE_DIR=$HOME/anaconda3/include/python3.6m \
