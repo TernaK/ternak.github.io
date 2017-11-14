@@ -1,5 +1,11 @@
-## Building opencv for python3 (Anaconda)
+## Building opencv
 
+### Basic build
+```
+cmake .. -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF
+```
+
+### For python3 (Anaconda)
 The following assumes Anaconda has been installed to the home directory in `$HOME/anaconda3`.
 
 ```
