@@ -21,3 +21,6 @@ cmake .. -DPYTHON_LIBRARY=$HOME/anaconda3/lib/libpython3.6m.dylib -DPYTHON_EXECU
          -DPYTHON_INCLUDE_DIR=$HOME/anaconda3/include/python3.6m \
          -DNUMPY_INCLUDE_DIR=$HOME/anaconda3/lib/python3.6/site-packages/numpy/core/include
 ```
+
+### boost-python (brew) for caffe
+Set the path `Boost_PYTHON-PY36_LIBRARY_RELEASE` as `/usr/local/Cellar/boost-python/1.65.1/lib/libboost_python3.dylib`.
