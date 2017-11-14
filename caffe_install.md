@@ -15,10 +15,9 @@ After running `cmake .. <args>`, edit `CMakeCache.txt` by finding the line point
 
 `vecLib_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Versions/Current/Frameworks/vecLib.framework/Headers`
 
-#### Anaconda build for opencv
+#### Anaconda build
 ```
-cmake .. -DPYTHON3_EXECUTABLE=$(which python) \
--DPYTHON3_INCLUDE_DIR=$(python -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
--DPYTHON3_PACKAGES_PATH=$(python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
--DBUILD_opencv_python2=OFF -BUILD_opencv_python3=ON -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF
+cmake .. -DPYTHON_LIBRARY=$HOME/anaconda3/lib/libpython3.6m.dylib -DPYTHON_EXECUTABLE=$HOME/anaconda3/bin/python \
+         -DPYTHON_INCLUDE_DIR=$HOME/anaconda3/include/python3.6m \
+         -DNUMPY_INCLUDE_DIR=$HOME/anaconda3/lib/python3.6/site-packages/numpy/core/include
 ```
