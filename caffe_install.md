@@ -17,5 +17,8 @@ After running `cmake .. <args>`, edit `CMakeCache.txt` by finding the line point
 
 #### Anaconda build for opencv
 ```
-cmake .. -DPYTHON3_EXECUTABLE=$(which python) -DPYTHON3_INCLUDE_DIR=$(python -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") -DPYTHON3_PACKAGES_PATH=$(python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") -DBUILD_opencv_python2=OFF -BUILD_opencv_python3=ON -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF
+cmake .. -DPYTHON3_EXECUTABLE=$(which python) \
+-DPYTHON3_INCLUDE_DIR=$(python -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
+-DPYTHON3_PACKAGES_PATH=$(python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
+-DBUILD_opencv_python2=OFF -BUILD_opencv_python3=ON -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF
 ```
