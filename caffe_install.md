@@ -17,9 +17,13 @@ After running `cmake .. <args>`, edit `CMakeCache.txt` by finding the line point
 
 #### python3 Anaconda build
 ```
-cmake .. -DPYTHON_LIBRARY=$HOME/anaconda3/lib/libpython3.6m.dylib -DPYTHON_EXECUTABLE=$HOME/anaconda3/bin/python \
-         -DPYTHON_INCLUDE_DIR=$HOME/anaconda3/include/python3.6m \
-         -DNUMPY_INCLUDE_DIR=$HOME/anaconda3/lib/python3.6/site-packages/numpy/core/include
+cmake .. \
+-DBUILD_TESTS=OFF \
+-DBUILD_PERF_TESTS=OFF \
+-DBUILD_opencv_python3=ON \
+-DBUILD_opencv_python2=OFF \
+-DPYTHON_LIBRARY=/Users/terna/anaconda3/lib/libpython3.5m.dylib \
+-DPYTHON_INCLUDE_DIR=/Users/terna/anaconda3/include/python3.5m
 ```
 
 ### boost-python (brew) for caffe
