@@ -21,7 +21,7 @@ vecLib_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/Mac
 - Edit `CMakeCache.txt` and set `Boost_PYTHON-PY363_LIBRARY_RELEASE`;
 
 ```
-Boost_PYTHON-PY363_LIBRARY_RELEASE=/usr/local/Cellar/boost-python/1.65.1/lib/libboost_python3.dylib`
+Boost_PYTHON-PY363_LIBRARY_RELEASE=/usr/local/Cellar/boost-python/1.65.1/lib/libboost_python3.dylib
 ```
 
 Also use the following if necessary;
