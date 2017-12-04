@@ -23,7 +23,9 @@ After running `cmake .. <args>`, edit `CMakeCache.txt` by finding the line point
 - Edit `CMakeCache.txt` and set `Boost_PYTHON-PY363_LIBRARY_RELEASE` to `/usr/local/Cellar/boost-python/1.65.1/lib/libboost_python3.dylib`.
 
 Also use the following if necessary;
+
 ```
-PYTHON_LIBRARY=/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/libpython3.6m.dylib -PYTHON_INCLUDE_DIR=/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/include/python3.6m
+PYTHON_LIBRARY=/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/libpython3.6m.dylib 
+PYTHON_INCLUDE_DIR=/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/include/python3.6m
 ```
 - Set the environment variable `PYTHONPATH` to `$CAFFEROOT/python` or run python from within that folder. 
