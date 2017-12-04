@@ -1,13 +1,6 @@
 ## Caffe Installation
 ### macOS (Sierra 10.12.6)
-1. Clone caffe into the home folder (strongly recommended).
-2. Make a `build` directory and from there, execute;
-```
-cmake .. <args> # args should set caffe to build for CPU mode
-```
-    
-   `vecLib` might have to be found as part of the `Accelerate` framework (see the `vecLib` section below). Resolve all dependencies then `make` and `sudo make install`. If everything is fine, the build outputs will be inside `caffe/build/install` including `lib`, `include` for the library and include files respectively. 
-3. Create a `CAFFEROOT` environment variable by running the following command or placing this into your `.bashrc` or `.zshrc` or whatever script is run when your terminal launches;
+Clone caffe into the home folder then create a `CAFFEROOT` environment variable by running the following command or placing this into your `.bashrc` or `.zshrc` or whatever script is run when your terminal launches;
 
 ```
 export CAFFEROOT=$HOME/caffe # caffe is in the home directory, $HOME`.
