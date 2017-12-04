@@ -2,18 +2,23 @@
 ### macOS (Sierra 10.12.6)
 1. Clone caffe into the home folder (strongly recommended).
 2. Make a `build` directory and from there, execute;
-
-    `cmake .. <args> # args should set caffe to build for CPU mode`
+```
+cmake .. <args> # args should set caffe to build for CPU mode
+```
     
-    `vecLib` might have to be found as part of the `Accelerate` framework (see the `vecLib` section below). Resolve all dependencies then `make` and `sudo make install`. If everything is fine, the build outputs will be inside `caffe/build/install` including `lib`, `include` for the library and include files respectively. 
+   `vecLib` might have to be found as part of the `Accelerate` framework (see the `vecLib` section below). Resolve all dependencies then `make` and `sudo make install`. If everything is fine, the build outputs will be inside `caffe/build/install` including `lib`, `include` for the library and include files respectively. 
 3. Create a `CAFFEROOT` environment variable by running the following command or placing this into your `.bashrc` or `.zshrc` or whatever script is run when your terminal launches;
 
-    `export CAFFEROOT=$HOME/caffe # caffe is in the home directory, $HOME`.
+```
+export CAFFEROOT=$HOME/caffe # caffe is in the home directory, $HOME`.
+```
 
 #### `vecLib` (this is no longer necessary)
 After running `cmake .. <args>`, edit `CMakeCache.txt` by finding the line pointing cmake to `vecLib` that begins with `vecLib_INCLUDE_DIR` and modify it as follows;
 
-`vecLib_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Versions/Current/Frameworks/vecLib.framework/Headers`
+```
+vecLib_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Versions/Current/Frameworks/vecLib.framework/Headers
+```
 
 #### python3 - The Winning Formula for macOS 💉
 - Forget anaconda. Use brew to install python3. I used 3.6.3, the default at the time.
