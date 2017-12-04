@@ -10,7 +10,7 @@
 
     `export CAFFEROOT=$HOME/caffe # caffe is in the home directory, $HOME`.
 
-#### `vecLib`
+#### `vecLib` (this is no longer necessary)
 After running `cmake .. <args>`, edit `CMakeCache.txt` by finding the line pointing cmake to `vecLib` that begins with `vecLib_INCLUDE_DIR` and modify it as follows;
 
 `vecLib_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Versions/Current/Frameworks/vecLib.framework/Headers`
