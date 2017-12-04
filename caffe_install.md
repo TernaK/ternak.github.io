@@ -18,7 +18,11 @@ vecLib_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/Mac
 - Install all the dependencies listed in `caffe/python/requirements.txt`.
 - Install `boost-python` with brew.
 - Edit the `CMakeLists.txt` and set `python_version` to `3`. Run `cmake`.
-- Edit `CMakeCache.txt` and set `Boost_PYTHON-PY363_LIBRARY_RELEASE` to `/usr/local/Cellar/boost-python/1.65.1/lib/libboost_python3.dylib`.
+- Edit `CMakeCache.txt` and set `Boost_PYTHON-PY363_LIBRARY_RELEASE`;
+
+```
+Boost_PYTHON-PY363_LIBRARY_RELEASE=/usr/local/Cellar/boost-python/1.65.1/lib/libboost_python3.dylib`
+```
 
 Also use the following if necessary;
 
