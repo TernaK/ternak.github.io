@@ -5,4 +5,3 @@ Discoveries, explanations and helpful tips about development. Mostly C++, maybe 
 - [Caffe](caffe_install.md)
 - [Object detection with CNNs](cnn_detection.md)
 - [Makefile/cmake](cmake_makefile_tips.md)
-- [3D geometry](3D_geometry.md)
