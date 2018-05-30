@@ -31,7 +31,7 @@ r31 | r32 | r33 | tz
 
 - `T` = [`tx` `ty` `tz`]' 
 
-  Position of the world origin offset form the camera.
+  Position of the world origin offset from the camera.
 
 - `X_c` = [`R` `T`] * `x`
 
