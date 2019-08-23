@@ -24,7 +24,7 @@ target_include_directories(<executable_name> PRIVATE ${include_dirs})
 ### Lazily specify header and library search paths and libraries to link using `pkg-config`
 Here's a simple `opencv` program;
 ```c++
-# program.cpp
+// program.cpp
 #include <iostream>
 #include <opencv2/opencv>
 using namespace cv;
