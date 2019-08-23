@@ -42,4 +42,4 @@ To compile;
 
 A shorthand way of doing this is;
 
-```g++ -std=c++11 program.cpp -o program `pkg-config --libs --cflags opencv)` ```
+```g++ -std=c++11 program.cpp -o program `pkg-config --libs --cflags opencv` ```
