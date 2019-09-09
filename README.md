@@ -1,3 +1,3 @@
 # ternak.github.io
 
-Helpful programming tips for `opencv` `python` `C++` `cmake` `caffe`.
+Helpful programming tips notes & code for `c++` `opencv` `python` `cmake` etc.
